@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+        <title>Lentelė</title>	
+        <link rel="stylesheet" href="css/style.css">        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.breakrow').click(function(){
+                    $(this).nextUntil('tr.breakrow').slideToggle(200);
+                });
+            });
+            
+            function change (th4){
+                if(document.getElementById(th4).className=="fa fa-chevron-up"){
+                    document.getElementById(th4).className = "fa fa-chevron-down";
+                }else{
+                    document.getElementById(th4).className = "fa fa-chevron-up";
+                }
+            }
+
+			function myFunction(divObj) {
+                if(divObj.style.color=="black"){
+                    divObj.style.color="#007153";
+                } else{divObj.style.color="black";}
+            }
+
+            if (screen.width < 500) {  
+                $("body").addClass("nohover");
+                $("td, th")
+                .attr("tabindex", "1")
+                .on("touchstart", function() {
+                    $(this).focus();
+                });    
+            }			
+        </script>
+    </head>   
+
+	<body>        
+        <div class="container">      
+			<table class="table hoverTable">
+                <thead>                    
+                    <tr>
+                        <th rowspan="2" id="th1" scope="col" style="vertical-align : middle">Rodiklio pavadinimas</th>
+                        <th colspan="2" id="th2" scope="col">Reikšmių grupė <i class="fas fa-info-circle"></i></th>
+                        <th colspan="2" id="th2" scope="col">Reikšmių grupė <i class="fas fa-info-circle"></i></th>
+                        <th colspan="2" id="th2" scope="col">Reikšmių grupė <i class="fas fa-info-circle"></i></th>
+                        <th rowspan="2"id="th3" scope="col" style="vertical-align : middle;text-align:center;">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>                        
+                    </tr>
+                    <tr>                        
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>
+                        <th id="th2" scope="col">Reikšmė <i class="fas fa-info-circle"></i> <i class="fas fa-sort"></i></th>                        
+                    </tr>
+                </thead>
+                <tbody>                              
+                    <tr class="table-light breakrow">
+                        <th scope="row" id="th4" class="center" onclick="change('icon1'); myFunction(this);">Rodiklių grupės pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i><i id="icon1" class="fa fa-chevron-up" aria hidden="true"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light breakrow">
+                        <th scope="row" id="th4" class="center" onclick="change('icon2'); myFunction(this);">Rodiklių grupės pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i><i id="icon2" class="fa fa-chevron-up" aria hidden="true"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light breakrow">
+                        <th scope="row" id="th4" class="center" onclick="change('icon3'); myFunction(this);">Rodiklių grupės pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i><i id="icon3" class="fa fa-chevron-up" aria hidden="true"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light breakrow">
+                        <th scope="row" id="th4" class="center" onclick="change('icon4'); myFunction(this);">Rodiklių grupės pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i><i id="icon4" class="fa fa-chevron-up" aria hidden="true"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>
+                    <tr class="table-light datarow">
+                        <th scope="row" id="th4"><i class="fas fa-circle" style="color: #949393; font-size:4px"></i> Rodiklių pavadinimas <i class="fas fa-info-circle" style="color: #949393;"></i></th>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                        <td scope="col" id="th5">00.00</td>
+                    </tr>                                
+                </tbody>
+            </table>           
+        </div>
+    </body>
+</html>
